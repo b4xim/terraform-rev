@@ -16,7 +16,7 @@ resource "aws_instance" "blade-ec2" {
     tags = {
         Name = each.key
     }
-    
+    for_each = var.instances
 }
 module "vpc" {
     source = "./modules/vpc"
