@@ -10,3 +10,15 @@ variable "ami_id" {
 variable "instance_count" {
   default = 3
 }
+variable "instances"{
+  default = {
+    web1 = {
+      instance_type = "t3.micro"
+      ami_id = "ami-091138d0f0d41ff90"
+    }
+    web2 = {
+      instance_type = "t3.small"
+      ami_id = "ami-091138d0f0d41ff90"
+    }
+  }
+}
